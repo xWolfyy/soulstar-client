@@ -33,6 +33,14 @@
         }
       ],
       [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.8.22"
+          }
+        }
+      ],
+      [
         "@reactvision/react-viro",
         {
           "android": {
