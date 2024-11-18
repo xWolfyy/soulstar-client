@@ -20,35 +20,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.your.appidentifier",
-      "permissions": [
-        "android.permission.CAMERA"
-      ]
+      "package": "com.wolfy.soulstar"
     },
     "plugins": [
       [
         "expo-camera",
         {
           "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "kotlinVersion": "1.9.10",
-            "compileSdkVersion": 34,
-            "targetSdkVersion": 34,
-            "minSdkVersion": 21
-          }
-        }
-      ],      
-      [
-        "@reactvision/react-viro",
-        {
-          "android": {
-            "xRMode": ["GVR", "AR", "OVR_MOBILE"]
-          }
         }
       ]
     ],
