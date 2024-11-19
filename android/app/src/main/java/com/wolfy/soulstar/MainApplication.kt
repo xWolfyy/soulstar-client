@@ -1,3 +1,7 @@
+              add(ReactViroPackage(ReactViroPackage.ViroPlatform.GVR))
+              add(ReactViroPackage(ReactViroPackage.ViroPlatform.AR))
+              add(ReactViroPackage(ReactViroPackage.ViroPlatform.OVR_MOBILE))
+
 package com.wolfy.soulstar
 import com.viromedia.bridge.ReactViroPackage
 
