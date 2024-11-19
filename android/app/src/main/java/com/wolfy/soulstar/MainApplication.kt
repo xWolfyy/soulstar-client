@@ -1,7 +1,3 @@
-              add(ReactViroPackage(ReactViroPackage.ViroPlatform.GVR))
-              add(ReactViroPackage(ReactViroPackage.ViroPlatform.AR))
-              add(ReactViroPackage(ReactViroPackage.ViroPlatform.OVR_MOBILE))
-
 package com.wolfy.soulstar
 import com.viromedia.bridge.ReactViroPackage
 
@@ -21,17 +17,27 @@ import com.facebook.soloader.SoLoader
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
 
+import com.viromedia.bridge.ReactViroPackage
+
+
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost = ReactNativeHostWrapper(
         this,
         object : DefaultReactNativeHost(this) {
-          override fun getPackages(): List<ReactPackage> {
-            val packages = PackageList(this).packages
+          override fun getPackages(): List<ReactPackage> =
+          PackageList(this).packages.apply {
             // Packages that cannot be autolinked yet can be added manually here, for example:
-            // packages.add(new MyReactNativePackage());
-            return packages
+            // add(MyReactNativePackage())
+        
+            add(ReactViroPackage(ReactViroPackage.ViroPlatform.valueOf("AR")))
           }
+        
+          override fun getJSMainModuleName(): String = "index"
+          override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
+          override val isNewArchEnabled: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
+          override val isHermesEnabled: Boolean = BuildConfig.IS_HERMES_ENABLED
+        }
 
           override fun getJSMainModuleName(): String = ".expo/.virtual-metro-entry"
 

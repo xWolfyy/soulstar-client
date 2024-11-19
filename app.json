@@ -24,16 +24,10 @@
     },
     "plugins": [
       [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
-        }
-      ],
-      [
         "@reactvision/react-viro",
         {
           "android": {
-            "xRMode": ["GVR", "AR", "OVR_MOBILE"]
+            "xRMode": ["AR"]
           }
         }
       ]
