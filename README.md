@@ -1,4 +1,3 @@
-Here’s a more personal and polished `README.md` that reflects the uniqueness of your project and guides you through the full setup process with a personal touch.
 
 ---
 
